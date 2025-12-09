@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "Fix login bug",
+    "description": "Deploy the latest stable version to the production environment.",
+    "createdAt": "2025-12-09T11:36:00.874Z",
+    "status": "doing"
+  },
+  {
+    "id": 2,
+    "title": "Review pull request",
+    "description": "Review the assigned pull request and provide feedback.",
+    "createdAt": "2025-12-09T11:36:00.875Z",
+    "status": "doing"
+  },
+  {
+    "id": 3,
+    "title": "Refactor task module",
+    "description": "Improve API response time and reduce unnecessary queries.",
+    "createdAt": "2025-12-09T11:36:00.875Z",
+    "status": "doing"
+  },
+  {
+    "id": 4,
+    "title": "Optimize API performance",
+    "description": "Deploy the latest stable version to the production environment.",
+    "createdAt": "2025-12-09T11:36:00.875Z",
+    "status": "done"
+  },
+  {
+    "id": 5,
+    "title": "Implement authentication",
+    "description": "Investigate and fix the issue preventing users from logging in.",
+    "createdAt": "2025-12-09T11:36:00.875Z",
+    "status": "todo"
+  },
+  {
+    "id": 6,
+    "title": "Fix login bug",
+    "description": "Deploy the latest stable version to the production environment.",
+    "createdAt": "2025-12-09T11:36:00.875Z",
+    "status": "todo"
+  },
+  {
+    "id": 7,
+    "title": "Implement authentication",
+    "description": "Improve API response time and reduce unnecessary queries.",
+    "createdAt": "2025-12-09T11:36:00.875Z",
+    "status": "doing"
+  },
+  {
+    "id": 8,
+    "title": "Deploy to production",
+    "description": "Investigate and fix the issue preventing users from logging in.",
+    "createdAt": "2025-12-09T11:36:00.875Z",
+    "status": "doing"
+  },
+  {
+    "id": 9,
+    "title": "Optimize API performance",
+    "description": "Handle edge cases and error states properly across the app.",
+    "createdAt": "2025-12-09T11:36:00.875Z",
+    "status": "todo"
+  },
+  {
+    "id": 10,
+    "title": "Review pull request",
+    "description": "Refactor the task module to improve readability and maintainability.",
+    "createdAt": "2025-12-09T11:36:00.876Z",
+    "status": "todo"
+  }
+]
