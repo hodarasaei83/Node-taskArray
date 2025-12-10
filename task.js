@@ -1,32 +1,63 @@
-import { writeFile } from "fs/promises";
+// import { writeFile } from "fs/promises";
 
-const TASK_COUNT = 10;
+// const TASK_COUNT = 10;
 
-const STATUSES = ["todo", "doing", "done"];
+// const STATUSES = ["todo", "doing", "done"];
 
-const random = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+// const random = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-const generateTasks = (count) => {
-  return Array.from({ length: count }, (_, i) => {
-    const id = i + 1;
-    const title = `Task ${id}`;
-    const description = `Description for task ${id}`;
-    const createdAt = new Date().toISOString();
-    const status = STATUSES[random(0, STATUSES.length - 1)];
+// const generateTasks = (count) => {
+//   return Array.from({ length: count }, (_, i) => {
+//     const id = i + 1;
+//     const title = `Task ${id}`;
+//     const description = `Description for task ${id}`;
+//     const createdAt = new Date().toISOString();
+//     const status = STATUSES[random(0, STATUSES.length - 1)];
 
-    return { id, title, description, createdAt, status };
-  });
-};
+//     return { id, title, description, createdAt, status };
+//   });
+// };
 
-const tasks = generateTasks(TASK_COUNT);
+// const tasks = generateTasks(TASK_COUNT);
 
-const saveToFile = async (data) => {
+// const saveToFile = async (data) => {
+//   try {
+//     await writeFile("tasks.json", JSON.stringify(data, null, 2));
+//     console.log("tasks.json saved successfully");
+//   } catch (error) {
+//     console.error("Error writing file:", error);
+//   }
+// };
+
+// saveToFile(tasks);
+
+import {writeFile } from 'fs/promises'
+
+const taskCount = 10
+const statusOption = ['todo','doing','done']
+
+const randomStatus = () => Math.round(Math.random()*statusOption.length - 1)
+const randomId = () => Math.round(Math.random()* taskCount)
+
+const generateTasks = (randomId, taskCount) => {
+  return Array.from({length: taskCount}, (v, i) => {
+    const id = i + 1
+    const title = `task ${id}`
+    const description = `this is ${id} task`
+    const createdAt = new Date().toDateString()
+    const status = statusOption[randomStatus(statusOption.length)]
+    return {id,title,description,createdAt, status}
+  })
+}
+const tasks = generateTasks(randomId(), taskCount)
+
+const savedTasks = async (tasks) => {
   try {
-    await writeFile("tasks.json", JSON.stringify(data, null, 2));
-    console.log("tasks.json saved successfully");
+    await writeFile('tasks.json',JSON.stringify(tasks, null, 2))
+    console.log('tasks are saved')
   } catch (error) {
-    console.error("Error writing file:", error);
+    console.log("saved error",error)
   }
-};
+}
 
-saveToFile(tasks);
+savedTasks(tasks)
